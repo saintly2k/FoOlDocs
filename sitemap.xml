@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>http://localhost//</loc>
+     <lastmod>2021-11-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>http://localhost//1. Installation/</loc>
+     <lastmod>2021-11-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>http://localhost//2. Content-Creation/</loc>
+     <lastmod>2021-11-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>http://localhost//3. Customizing FSX/</loc>
+     <lastmod>2021-11-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+</urlset>

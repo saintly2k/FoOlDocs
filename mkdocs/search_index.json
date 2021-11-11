@@ -1,0 +1,94 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Welcome to the FoOlSlideX Docs: FoOlDocs!\n\n\nThe new, most powerful Comic- & Manga-Reader & CMS ever created by the human race. Reworked by an Otaku for Scanlation-Groups.\n\n\nDocumentation currently for Version: \npre-11.11.2021-18:24\n\n\nThe source can be found at \nsaintly2k/FoOlSlideX\n.\n\n\nContent",
+            "title": "Home"
+        },
+        {
+            "location": "/#welcome-to-the-foolslidex-docs-fooldocs",
+            "text": "The new, most powerful Comic- & Manga-Reader & CMS ever created by the human race. Reworked by an Otaku for Scanlation-Groups.  Documentation currently for Version:  pre-11.11.2021-18:24  The source can be found at  saintly2k/FoOlSlideX .",
+            "title": "Welcome to the FoOlSlideX Docs: FoOlDocs!"
+        },
+        {
+            "location": "/#content",
+            "text": "",
+            "title": "Content"
+        },
+        {
+            "location": "/1. Installation/",
+            "text": "Installation\n\n\nRequirements\n\n\n\n\nPHP7 or greater & everything related to MySQL\n\n\nAny Webserver (tested with apache2)\n\n\nScanlations you created\n\n\n[OPTIONAL] phpMyAdmin\n\n\n\n\nSetup\n\n\nAt first, clone this whole stuff into your webroot:\n\n\ngit clone https://github.com/saintly2k/FoOlSlideX /path/to/your/webroot/\n\n\nNow open the page in your webbrowser. It should show an error that it could not connect to the Database, but thats okay.\n\n\nNow let's login to phpMyAdmin (or any other software) and create a Database with the name \nfoolslidex\n (but you can use any name you want tho).\n\n\nThen import \nfoolslidex.sql\n which you just downloaded to \npath/to/your/webroot/\n to the Database you just created.\n\n\nConfiguring\n\n\nOpen \ncore/config.php\n with any editor you want. Here you can find all variables that you can customize. Here are all explained (again):\n\n\n\n\nBasic Configuration\n\n\n$config[\"home\"]\n is your site name that will be displayed everywhere\n\n\n$config[\"logo\"]\n is your logo, that will be displayed in the Menu. Leave blank for no logo and only text.\n\n\n$config[\"url\"]\n is the URL of your site. \nMake sure it ends with a slash or else the site will break!\n\n\n$config[\"home\"]\n is which page should be displayed instead of the home page. Available pages:\n\n\nhome\n - Default home-page\n\n\nlatest\n - a list of latest Chapters\n\n\nmanga\n - All Mangas listed\n\n\nabout\n - The about-page, please do \nnot\n customize it since it includes \nall credits\n\n\n\n\n\n\n$config[\"theme\"]\n is, which Theme should be used, those are located in \nassets/themes/\n\n\n$config[\"hero\"]\n is how many Mangas should be displayed on the \nhome\n-page in the Heroslider\n\n\n$config[\"chapters\"]\n is how many latest Chapters should be displayed on the \nhome\n-page\n\n\n\n\n\n\nItems per page shown (for pagination)\n\n\n$perpage[\"manga\"]\n is how many Mangas should be displayed on the \nmanga\n-page\n\n\n$perpage[\"latest\"]\n is how many Chapters should be dislayed on the \nlatest\n-page\n\n\n$perpage[\"list\"]\n is how many Chapters should be shown on a Manga\n\n\n\n\n\n\nReader Configs\n\n\n$reader[\"type\"]\n \nNot implemented yet\n\n\n\n\n\n\nSocials Configs\n\n\n$socials[\"twitter\"]\n is linking to your Twitter, leave blank for not shown\n\n\n$socials[\"mangadex\"]\n is linking to your MangaDex, leave blank for not shown\n\n\n$socials[\"discord\"]\n is linking to your Discord-server, leave blank for not shown\n\n\n`$socials[\"irc\"] \nNot implemented yet\n\n\n$socials[\"facebook\"]\n is linking to your Facebook-page, leave blank for not shown\n\n\n$socials[\"website\"]\n is a custom link that can Link to anything\n\n\n\n\n\n\nChapter-Generation features\n\n\n$chagen[\"slug\"]\n \nNot implemented yet\n\n\n$chagen[\"length\"]\n \nNot implemented yet\n\n\n\n\n\n\nDatabase Details\n\n\n$based[\"host\"]\n is the host of your Database, usually \nlocalhost\n\n\n$based[\"user\"]\n is the user the site uses to login to your host\n\n\n$based[\"pass\"]\n is the password used for the Database login\n\n\n$based[\"table\"]\n is the table you imported \nfoolslidex.sql\n to, by default \nfoolslidex",
+            "title": "1. Installation"
+        },
+        {
+            "location": "/1. Installation/#installation",
+            "text": "",
+            "title": "Installation"
+        },
+        {
+            "location": "/1. Installation/#requirements",
+            "text": "PHP7 or greater & everything related to MySQL  Any Webserver (tested with apache2)  Scanlations you created  [OPTIONAL] phpMyAdmin",
+            "title": "Requirements"
+        },
+        {
+            "location": "/1. Installation/#setup",
+            "text": "At first, clone this whole stuff into your webroot:  git clone https://github.com/saintly2k/FoOlSlideX /path/to/your/webroot/  Now open the page in your webbrowser. It should show an error that it could not connect to the Database, but thats okay.  Now let's login to phpMyAdmin (or any other software) and create a Database with the name  foolslidex  (but you can use any name you want tho).  Then import  foolslidex.sql  which you just downloaded to  path/to/your/webroot/  to the Database you just created.",
+            "title": "Setup"
+        },
+        {
+            "location": "/1. Installation/#configuring",
+            "text": "Open  core/config.php  with any editor you want. Here you can find all variables that you can customize. Here are all explained (again):   Basic Configuration  $config[\"home\"]  is your site name that will be displayed everywhere  $config[\"logo\"]  is your logo, that will be displayed in the Menu. Leave blank for no logo and only text.  $config[\"url\"]  is the URL of your site.  Make sure it ends with a slash or else the site will break!  $config[\"home\"]  is which page should be displayed instead of the home page. Available pages:  home  - Default home-page  latest  - a list of latest Chapters  manga  - All Mangas listed  about  - The about-page, please do  not  customize it since it includes  all credits    $config[\"theme\"]  is, which Theme should be used, those are located in  assets/themes/  $config[\"hero\"]  is how many Mangas should be displayed on the  home -page in the Heroslider  $config[\"chapters\"]  is how many latest Chapters should be displayed on the  home -page    Items per page shown (for pagination)  $perpage[\"manga\"]  is how many Mangas should be displayed on the  manga -page  $perpage[\"latest\"]  is how many Chapters should be dislayed on the  latest -page  $perpage[\"list\"]  is how many Chapters should be shown on a Manga    Reader Configs  $reader[\"type\"]   Not implemented yet    Socials Configs  $socials[\"twitter\"]  is linking to your Twitter, leave blank for not shown  $socials[\"mangadex\"]  is linking to your MangaDex, leave blank for not shown  $socials[\"discord\"]  is linking to your Discord-server, leave blank for not shown  `$socials[\"irc\"]  Not implemented yet  $socials[\"facebook\"]  is linking to your Facebook-page, leave blank for not shown  $socials[\"website\"]  is a custom link that can Link to anything    Chapter-Generation features  $chagen[\"slug\"]   Not implemented yet  $chagen[\"length\"]   Not implemented yet    Database Details  $based[\"host\"]  is the host of your Database, usually  localhost  $based[\"user\"]  is the user the site uses to login to your host  $based[\"pass\"]  is the password used for the Database login  $based[\"table\"]  is the table you imported  foolslidex.sql  to, by default  foolslidex",
+            "title": "Configuring"
+        },
+        {
+            "location": "/2. Content-Creation/",
+            "text": "Creating Users to login\n\n\nEdit the file located at \nviews/pages/users.php\n.\n\n\nInsert a Username in the \nusernames\n-array and add the password in the \npasswords\n-array. Here is an example: \n\n\n$usernames = array(\"user1\", \"user2\");\n$passwords = array(\"user1\" => \"password1\", \"user2\" => \"password2\");\n\n\nLogin to your site with the Details you just set.\n\n\nCreating a Manga\n\n\nFor this, click on the top-right \"Account\"-text and select \"Add Manga\".\n\n\nUpload your Cover-image there and hit confirm. After that, insert all the fields you want to:\n\n\n\n\n[REQUIRED]\n Manga Title\n\n\n[OPTIONAL]\n Alternative Titles\n\n\n[REQUIRED]\n Scanlation Status\n\n\n[OPTIONAL]\n Description\n\n\n\n\nAfter that click the \"Add Manga\" Button and you're ready to go.\n\n\nEdit a Manga\n\n\nGo to the Manga, select \"Admin Tools\" and hit \"Edit Manga\".\n\n\nMake the changes you want to make and click \"Save Changes\".\n\n\nDelete a Manga\n\n\nVisit the Manga, click \"Admin Tools\" and select \"Delete Manga\".\n\n\nConfirm your action.\n\n\nYou cannot undo this action!\n (The Chapters won't be deleted though)\n\n\nCreating a Chapter\n\n\nAt first, upload the directory with all the Images to the \nchapters/\n directory. You can also place it inside a folder, like this:\n\n\nManga One\n|- Chapter 1\n|- |- 01.jpg\n|- |- 02.jpeg\n|- Chapter 2.1\n|- |- 01.jpg\n|- |- 01.png\nManga Two Chapter 5\n|- p01.jpg\n|- p02.jpg\n\n\nThen go to the Manga you want to upload and click \"Admin Tools\" and then select \"Add Chapter\"\n\n\nThere, insert the Directory you just placed the Images to (e.g: \nManga One/Chapter 1/\n). \nMake sure, it ends WITH a trailing slash or else the images won't show!\n (No worries, you can edit the folder later on)\n\n\nThen click \"Set Chapter Directory\" and confirm the Directory after that.\n\n\nNow fill out the other fields:\n\n\n\n\n[OPTIONAL]\n Chapter Title\n\n\n[REQUIRED]\n Chapter Number \n(Don't Zeropad it like 01 or 04!)\n\n\n\n\nEdit a Chapter\n\n\nJust click \"Edit Chapter\" (it is displayed behind every Chapter).\n\n\nMake the changes you want to make and click \"Save Changes\".\n\n\nDelete a Chapter\n\n\nView the Chapter you want to delete (like if you would read it).\n\n\nAt the sidebar, there's the \"Delete Chapter\" Link, click it.\n\n\nThe confirm your action or cancel.\n\n\nYou cannot recover a deleted Chapter!\n (The Directory won't be deleted though)",
+            "title": "2. Content Creation"
+        },
+        {
+            "location": "/2. Content-Creation/#creating-users-to-login",
+            "text": "Edit the file located at  views/pages/users.php .  Insert a Username in the  usernames -array and add the password in the  passwords -array. Here is an example:   $usernames = array(\"user1\", \"user2\");\n$passwords = array(\"user1\" => \"password1\", \"user2\" => \"password2\");  Login to your site with the Details you just set.",
+            "title": "Creating Users to login"
+        },
+        {
+            "location": "/2. Content-Creation/#creating-a-manga",
+            "text": "For this, click on the top-right \"Account\"-text and select \"Add Manga\".  Upload your Cover-image there and hit confirm. After that, insert all the fields you want to:   [REQUIRED]  Manga Title  [OPTIONAL]  Alternative Titles  [REQUIRED]  Scanlation Status  [OPTIONAL]  Description   After that click the \"Add Manga\" Button and you're ready to go.",
+            "title": "Creating a Manga"
+        },
+        {
+            "location": "/2. Content-Creation/#edit-a-manga",
+            "text": "Go to the Manga, select \"Admin Tools\" and hit \"Edit Manga\".  Make the changes you want to make and click \"Save Changes\".",
+            "title": "Edit a Manga"
+        },
+        {
+            "location": "/2. Content-Creation/#delete-a-manga",
+            "text": "Visit the Manga, click \"Admin Tools\" and select \"Delete Manga\".  Confirm your action.  You cannot undo this action!  (The Chapters won't be deleted though)",
+            "title": "Delete a Manga"
+        },
+        {
+            "location": "/2. Content-Creation/#creating-a-chapter",
+            "text": "At first, upload the directory with all the Images to the  chapters/  directory. You can also place it inside a folder, like this:  Manga One\n|- Chapter 1\n|- |- 01.jpg\n|- |- 02.jpeg\n|- Chapter 2.1\n|- |- 01.jpg\n|- |- 01.png\nManga Two Chapter 5\n|- p01.jpg\n|- p02.jpg  Then go to the Manga you want to upload and click \"Admin Tools\" and then select \"Add Chapter\"  There, insert the Directory you just placed the Images to (e.g:  Manga One/Chapter 1/ ).  Make sure, it ends WITH a trailing slash or else the images won't show!  (No worries, you can edit the folder later on)  Then click \"Set Chapter Directory\" and confirm the Directory after that.  Now fill out the other fields:   [OPTIONAL]  Chapter Title  [REQUIRED]  Chapter Number  (Don't Zeropad it like 01 or 04!)",
+            "title": "Creating a Chapter"
+        },
+        {
+            "location": "/2. Content-Creation/#edit-a-chapter",
+            "text": "Just click \"Edit Chapter\" (it is displayed behind every Chapter).  Make the changes you want to make and click \"Save Changes\".",
+            "title": "Edit a Chapter"
+        },
+        {
+            "location": "/2. Content-Creation/#delete-a-chapter",
+            "text": "View the Chapter you want to delete (like if you would read it).  At the sidebar, there's the \"Delete Chapter\" Link, click it.  The confirm your action or cancel.  You cannot recover a deleted Chapter!  (The Directory won't be deleted though)",
+            "title": "Delete a Chapter"
+        },
+        {
+            "location": "/3. Customizing FSX/",
+            "text": "Customizing your Installation\n\n\nIt is recommended to Copy the Folder \"RoriconScans\" and make the changes there, but you can do it how you want to.\n\n\nSimply copy the Folder and rename it to what you want.\n\n\nYou can edit these files:\n\n\n\n\nedit.css\n\n\nlogin.css\n\n\nmain.css\n\n\npagination.css\n\n\n\n\nYou can't edit these file (or else you will break the hero-slider):\n\n\n\n\nw3.css",
+            "title": "3. Customizing FSX"
+        },
+        {
+            "location": "/3. Customizing FSX/#customizing-your-installation",
+            "text": "It is recommended to Copy the Folder \"RoriconScans\" and make the changes there, but you can do it how you want to.  Simply copy the Folder and rename it to what you want.  You can edit these files:   edit.css  login.css  main.css  pagination.css   You can't edit these file (or else you will break the hero-slider):   w3.css",
+            "title": "Customizing your Installation"
+        }
+    ]
+}

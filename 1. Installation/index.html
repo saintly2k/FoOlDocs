@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="canonical" href="http://localhost/1. Installation/">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>1. Installation - FoOlDocs</title>
+    <link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Installation", url: "#_top", children: [
+              {title: "Requirements", url: "#requirements" },
+              {title: "Setup", url: "#setup" },
+              {title: "Configuring", url: "#configuring" },
+          ]},
+        ];
+
+    </script>
+    <script src="../js/base.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../2. Content-Creation/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../2. Content-Creation/" class="btn btn-xs btn-link">
+        2. Content Creation
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href=".." class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href=".." class="btn btn-xs btn-link">
+        Home
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="installation">Installation</h1>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>PHP7 or greater &amp; everything related to MySQL</li>
+<li>Any Webserver (tested with apache2)</li>
+<li>Scanlations you created</li>
+<li>[OPTIONAL] phpMyAdmin</li>
+</ul>
+<h2 id="setup">Setup</h2>
+<p>At first, clone this whole stuff into your webroot:</p>
+<p><code>git clone https://github.com/saintly2k/FoOlSlideX /path/to/your/webroot/</code></p>
+<p>Now open the page in your webbrowser. It should show an error that it could not connect to the Database, but thats okay.</p>
+<p>Now let's login to phpMyAdmin (or any other software) and create a Database with the name <code>foolslidex</code> (but you can use any name you want tho).</p>
+<p>Then import <code>foolslidex.sql</code> which you just downloaded to <code>path/to/your/webroot/</code> to the Database you just created.</p>
+<h2 id="configuring">Configuring</h2>
+<p>Open <code>core/config.php</code> with any editor you want. Here you can find all variables that you can customize. Here are all explained (again):</p>
+<ul>
+<li>Basic Configuration<ul>
+<li><code>$config["home"]</code> is your site name that will be displayed everywhere</li>
+<li><code>$config["logo"]</code> is your logo, that will be displayed in the Menu. Leave blank for no logo and only text.</li>
+<li><code>$config["url"]</code> is the URL of your site. <strong>Make sure it ends with a slash or else the site will break!</strong></li>
+<li><code>$config["home"]</code> is which page should be displayed instead of the home page. Available pages:<ul>
+<li><code>home</code> - Default home-page</li>
+<li><code>latest</code> - a list of latest Chapters</li>
+<li><code>manga</code> - All Mangas listed</li>
+<li><code>about</code> - The about-page, please do <strong>not</strong> customize it since it includes <strong>all credits</strong></li>
+</ul>
+</li>
+<li><code>$config["theme"]</code> is, which Theme should be used, those are located in <code>assets/themes/</code></li>
+<li><code>$config["hero"]</code> is how many Mangas should be displayed on the <code>home</code>-page in the Heroslider</li>
+<li><code>$config["chapters"]</code> is how many latest Chapters should be displayed on the <code>home</code>-page</li>
+</ul>
+</li>
+<li>Items per page shown (for pagination)<ul>
+<li><code>$perpage["manga"]</code> is how many Mangas should be displayed on the <code>manga</code>-page</li>
+<li><code>$perpage["latest"]</code> is how many Chapters should be dislayed on the <code>latest</code>-page</li>
+<li><code>$perpage["list"]</code> is how many Chapters should be shown on a Manga</li>
+</ul>
+</li>
+<li>Reader Configs<ul>
+<li><code>$reader["type"]</code> <strong>Not implemented yet</strong></li>
+</ul>
+</li>
+<li>Socials Configs<ul>
+<li><code>$socials["twitter"]</code> is linking to your Twitter, leave blank for not shown</li>
+<li><code>$socials["mangadex"]</code> is linking to your MangaDex, leave blank for not shown</li>
+<li><code>$socials["discord"]</code> is linking to your Discord-server, leave blank for not shown</li>
+<li>`$socials["irc"] <strong>Not implemented yet</strong></li>
+<li><code>$socials["facebook"]</code> is linking to your Facebook-page, leave blank for not shown</li>
+<li><code>$socials["website"]</code> is a custom link that can Link to anything</li>
+</ul>
+</li>
+<li>Chapter-Generation features<ul>
+<li><code>$chagen["slug"]</code> <strong>Not implemented yet</strong></li>
+<li><code>$chagen["length"]</code> <strong>Not implemented yet</strong></li>
+</ul>
+</li>
+<li>Database Details<ul>
+<li><code>$based["host"]</code> is the host of your Database, usually <code>localhost</code></li>
+<li><code>$based["user"]</code> is the user the site uses to login to your host</li>
+<li><code>$based["pass"]</code> is the password used for the Database login</li>
+<li><code>$based["table"]</code> is the table you imported <code>foolslidex.sql</code> to, by default <code>foolslidex</code></li>
+</ul>
+</li>
+</ul>
+
+  <br>
+    
+
+    
+    
+      
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../2. Content-Creation/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../2. Content-Creation/" class="btn btn-xs btn-link">
+        2. Content Creation
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href=".." class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href=".." class="btn btn-xs btn-link">
+        Home
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+      <p>
+        <a href="https://github.com/saintly2k/foolslidex/edit/master/docs/1. Installation.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p><p>Copyright 2021 saintly2k, licenced under the MIT Licence</p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/saintly2k/foolslidex">Windmill Dark</a> theme by None (noraj).</p>
+</footer>
+
+</body>
+</html>
